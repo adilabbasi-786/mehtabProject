@@ -68,8 +68,8 @@ export function TestimonialSlider({ autoSlideInterval = 5000, className }) {
   const resumeAutoPlay = () => setIsAutoPlaying(true);
 
   return (
-    <div className="w-full px-4 py-12 md:py-16 lg:py-20 ">
-      <div className="container mx-auto">
+    <div className={`w-full ${className || ""}`}>
+      <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary mb-4">
             Our Happy Clients
@@ -86,28 +86,32 @@ export function TestimonialSlider({ autoSlideInterval = 5000, className }) {
         >
           <div className="overflow-hidden">
             <div className="bg-background rounded-lg shadow-sm border">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-6">
-                <div className="p-6 md:p-4 flex flex-col justify-center h-[400px] md:h-[700px]">
-                  <blockquote className="text-lg mb-1">
-                    {testimonials[currentIndex].quote}
-                  </blockquote>
-                  <div className="mt-auto">
-                    <h3 className="text-xl font-semibold text-primary">
-                      {testimonials[currentIndex].name}
-                    </h3>
-                    <p className="text-muted-foreground">
-                      {testimonials[currentIndex].title}
-                    </p>
-                  </div>
-                </div>
-                <div className="relative h-[300px] md:h-auto">
+              {/* ✅ Adjusted Grid for mobile and desktop */}
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-0 md:gap-6 items-center">
+                {/* ✅ Image Section First for mobile */}
+                <div className="relative w-full h-[150px] xs:h-[200px] sm:h-[250px] md:h-[500px] flex items-center justify-center bg-background rounded-l-lg md:rounded-none md:rounded-l-lg">
                   <Image
                     src={testimonials[currentIndex].image || "/placeholder.svg"}
                     alt={testimonials[currentIndex].name}
                     fill
-                    className="object-cover"
+                    className="object-contain p-1"
                     priority={currentIndex === 0}
                   />
+                </div>
+
+                {/* ✅ Testimonial Text */}
+                <div className="p-4 sm:p-6 md:p-8 flex flex-col justify-center h-auto md:h-[500px] bg-gray-100 rounded-r-lg md:rounded-none md:rounded-r-lg">
+                  <blockquote className="text-xs xs:text-sm sm:text-base md:text-lg mb-2 sm:mb-4">
+                    {testimonials[currentIndex].quote}
+                  </blockquote>
+                  <div className="mt-2 sm:mt-4">
+                    <h3 className="text-sm sm:text-lg md:text-xl font-semibold text-primary">
+                      {testimonials[currentIndex].name}
+                    </h3>
+                    <p className="text-muted-foreground text-xs sm:text-sm">
+                      {testimonials[currentIndex].title}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

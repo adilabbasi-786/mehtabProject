@@ -1,7 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-
+import { BsJournalMedical } from "react-icons/bs";
+import { TfiWrite } from "react-icons/tfi";
+import { BsAndroid2 } from "react-icons/bs";
 export default function Expertise() {
   return (
     <main className="min-h-screen bg-white">
@@ -20,13 +22,7 @@ export default function Expertise() {
           {/* Medical Billing Card */}
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <div className="mb-4">
-              <Image
-                src="/placeholder.svg?height=60&width=60"
-                alt="Medical Billing Icon"
-                width={60}
-                height={60}
-                className="text-blue-500"
-              />
+              <BsJournalMedical className="w-12 h-15 text-blue-400" />
             </div>
             <h3 className="text-xl font-semibold text-slate-800 mb-2">
               Medical Billing
@@ -45,13 +41,7 @@ export default function Expertise() {
           {/* Medical Credentialing Card */}
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <div className="mb-4">
-              <Image
-                src="/placeholder.svg?height=60&width=60"
-                alt="Medical Credentialing Icon"
-                width={60}
-                height={60}
-                className="text-blue-500"
-              />
+              <TfiWrite className="w-12 h-15 text-blue-400" />
             </div>
             <h3 className="text-xl font-semibold text-slate-800 mb-2">
               Medical Credentialing
@@ -70,13 +60,7 @@ export default function Expertise() {
           {/* Website Development Card */}
           <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
             <div className="mb-4">
-              <Image
-                src="/placeholder.svg?height=60&width=60"
-                alt="Website Development Icon"
-                width={60}
-                height={60}
-                className="text-blue-500"
-              />
+              <BsAndroid2 className="w-12 h-15 text-blue-400" />
             </div>
             <h3 className="text-xl font-semibold text-slate-800 mb-2">
               Website Development

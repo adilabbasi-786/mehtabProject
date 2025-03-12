@@ -42,7 +42,7 @@ export default function Header() {
               Home
             </Link>
             <Link
-              href="/about"
+              href="/aboutus"
               className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
             >
               About Us
@@ -54,10 +54,10 @@ export default function Header() {
               Services
             </Link>
             <Link
-              href="/testimonials"
+              href="/specialities"
               className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
             >
-              Testimonials
+              Specialties
             </Link>
             <Link
               href="/contact"
@@ -100,7 +100,7 @@ export default function Header() {
                 Home
               </Link>
               <Link
-                href="/about"
+                href="/aboutus"
                 className="hover:text-blue-100 transition-colors"
               >
                 About Us
@@ -112,10 +112,10 @@ export default function Header() {
                 Services
               </Link>
               <Link
-                href="/testimonials"
+                href="/specialities"
                 className="hover:text-blue-100 transition-colors"
               >
-                Testimonials
+                Specialties
               </Link>
               <Link
                 href="/contact"
