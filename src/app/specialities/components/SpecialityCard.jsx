@@ -134,7 +134,7 @@ const specialties = [
     icon: Bandage,
     title: "Wound Care Billing Services",
     description:
-      "Elevate revenue and growth with iRCM wound care billing services specialized expertise for impactful results.",
+      " Elevate revenue and growth with Solis RCM's wound care billing services - specialized expertise for impactful results.",
   },
 
   // New specialties
@@ -148,7 +148,7 @@ const specialties = [
     icon: TestTube,
     title: "Pathology Billing Services",
     description:
-      "Partner with iRCM for swift claims and seamless payments in pathology practices, resolving billing challenges efficiently.",
+      "Partner with Solis RCM for swift claims and seamless payments in pathology practices, resolving billing challenges efficiently.",
   },
   {
     icon: Family,
@@ -160,31 +160,31 @@ const specialties = [
     icon: Clock,
     title: "Urgent Care Billing Services",
     description:
-      "Maximize revenue with iRCM's urgent care billing solutions. Clean claim rate, fast turnaround, low denial rate. Optimize your financial excellence!",
+      "Maximize revenue with Solis RCM's urgent care billing solutions. Clean claim rate, fast turnaround, low denial rate. Optimize your financial excellence!",
   },
   {
     icon: Scalpel,
     title: "General Surgery Billing",
     description:
-      "Streamline your finances with iRCM General Surgery Billing Services.Trust us for quick claims and smooth payments in medical billing.",
+      "Streamline your finances with Solis RCM General Surgery Billing Services.Trust us for quick claims and smooth payments in medical billing.",
   },
   {
     icon: Bone,
     title: "Orthopedic Billing Services",
     description:
-      "Optimize your practice's financial health with iRCM Orthopedic Medical Billing Services. Simplify finances, prioritize patient care.",
+      "Optimize your practice's financial health with Solis RCM Orthopedic Medical Billing Services. Simplify finances, prioritize patient care.",
   },
   {
     icon: Lungs,
     title: "Pulmonology Billing Services",
     description:
-      "Maximize revenue, reduce claim denials & collaborate with iRCM's Pulmonology Billing Services. Certified experts for precise efficiency.",
+      "Maximize revenue, reduce claim denials & collaborate with Solis RCM's Pulmonology Billing Services. Certified experts for precise efficiency.",
   },
   {
     icon: Clipboard,
     title: "Internal Medicine Billing",
     description:
-      "Optimize your internal medicine billing with iRCM expert services. Boost efficiency, maximize returns, and streamline claims for success.",
+      "Optimize your internal medicine billing with Solis RCM expert services. Boost efficiency, maximize returns, and streamline claims for success.",
   },
   {
     icon: Drop,
@@ -196,25 +196,25 @@ const specialties = [
     icon: Virus,
     title: "Infectious Disease Billing",
     description:
-      "Optimize your infectious disease practice revenue with iRCM's expert billing solutions, prioritizing patient care.",
+      "Optimize your infectious disease practice revenue with Solis RCM's expert billing solutions, prioritizing patient care.",
   },
   {
     icon: Tooth,
     title: "Dental Billing Services",
     description:
-      "Discover iRCM's dental billing solutions, simplifying financial management for optimized revenue and seamless operations.",
+      "Discover Solis RCM's dental billing solutions, simplifying financial management for optimized revenue and seamless operations.",
   },
   {
     icon: Spine,
     title: "Chiropractic Billing Services",
     description:
-      "Transform practice revenue with iRCM Chiropractic Billing Services. Specialized solutions for efficiency and growth.",
+      "Transform practice revenue with Solis RCM Chiropractic Billing Services. Specialized solutions for efficiency and growth.",
   },
   {
     icon: UserCircle,
     title: "OB/GYN Medical Billing",
     description:
-      "Maximize OB/GYN revenue with practice-specific billing by iRCM's tailored services, and reliable solutions for maximum returns.",
+      "Maximize OB/GYN revenue with practice-specific billing by Solis RCM's tailored services, and reliable solutions for maximum returns.",
   },
   {
     icon: Drop,
@@ -236,13 +236,13 @@ const Specialties = () => {
       <div className="container mx-auto px-4 max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            Discover iRCM Specialties & Elevate Your Revenue Cycle
+            Discover Solis RCM Specialties & Elevate Your Revenue Cycle
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto">
-            Transform your revenue cycle and unlock success with iRCM
+            Transform your revenue cycle and unlock success with Solis RCM
             Specialties. Experience the power of expert medical billing
             solutions to elevate your financial growth. Discover the key to
-            maintaining revenue and efficiency in healthcare today.
+            maximizing revenue and efficiency in healthcare today.
           </p>
         </div>
 

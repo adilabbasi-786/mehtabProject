@@ -35,7 +35,7 @@ export default function TopHeader() {
               </div>
               <div className="text-left">
                 <p className="text-xs text-gray-500">CALL US NOW :</p>
-                <p className="text-sm font-medium">(469) 915-4211</p>
+                <p className="text-sm font-medium">412-547-2794</p>
               </div>
             </div>
 
@@ -46,7 +46,7 @@ export default function TopHeader() {
               </div>
               <div className="text-left">
                 <p className="text-xs text-gray-500">Email Address</p>
-                <p className="text-sm font-medium">info@tristarmbc.com</p>
+                <p className="text-sm font-medium">info@solisrcm.com</p>
               </div>
             </div>
           </div>

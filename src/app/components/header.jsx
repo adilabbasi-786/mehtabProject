@@ -1,15 +1,25 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10); // Trigger shadow when scrolled 10px
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       {/* Mobile Menu Overlay */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-blue-900 z-50 md:hidden flex flex-col h-screen">
+        <div className="bg-blue-500 rounded-full mx-4 md:mx-8 lg:mx-16 fixed top-0 left-0 right-0 z-50">
           <div className="flex justify-between items-center p-4 border-b border-blue-800">
             <button className="text-white" onClick={() => setIsMenuOpen(false)}>
               <svg

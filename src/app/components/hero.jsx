@@ -2,6 +2,7 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import Marquee from "react-fast-marquee";
 
 export default function Hero() {
   const pathname = usePathname();
@@ -40,9 +41,9 @@ export default function Hero() {
             ) : pathname === "/aboutus" ? (
               <p className="text-4xl font-bold text-white">About Us</p>
             ) : pathname === "/specialities" ? (
-              <p className="text-4xl font-bold text-white"> Our Specialties</p>
+              <p className="text-4xl font-bold text-white">Our Specialties</p>
             ) : pathname === "/contact" ? (
-              <p className="text-4xl font-bold text-white"> Contact Us</p>
+              <p className="text-4xl font-bold text-white">Contact Us</p>
             ) : pathname === "/services" ? (
               <p className="text-4xl font-bold text-white">Services</p>
             ) : null}
@@ -58,6 +59,17 @@ export default function Hero() {
         </button>
       </div>
 
+      {/* Ticker Section */}
+      <Marquee
+        speed={50}
+        gradient={false}
+        className="bg-black text-red-500 py-3 text-xl font-semibold"
+      >
+        Be hurry! Avail our offer and services — 20% off on entire menu —
+        Contact us for More Details!
+      </Marquee>
+
+      {/* Call Us Section */}
       <div className="h-[150px] bg-[#0d4471] flex items-center justify-center">
         <p className="text-white text-3xl text-center">
           Looking To Get Our Services - Call Us Now (469) 915-4211

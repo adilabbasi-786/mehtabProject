@@ -118,16 +118,13 @@ export default function Footer() {
             <address className="not-italic space-y-2 text-sm">
               <p>16775 Addison Rd, Addison, TX 75001</p>
               <p>
-                <a href="tel:+14699154211" className="hover:underline">
-                  (469) 915-4211
+                <a href="tel:+ 412-547-2794" className="hover:underline">
+                  412-547-2794
                 </a>
               </p>
               <p>
-                <a
-                  href="mailto:info@tristarmbc.com"
-                  className="hover:underline"
-                >
-                  info@tristarmbc.com
+                <a href="mailto:info@solisrcm.com" className="hover:underline">
+                  info@solisrcm.com
                 </a>
               </p>
             </address>
