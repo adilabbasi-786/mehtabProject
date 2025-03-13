@@ -4,6 +4,7 @@ import Header from "../components/header";
 import Hero from "../components/hero";
 import Expertise from "../components/expertise";
 import Footer from "../components/footer";
+import OurServices from "./components/OurServices";
 
 const Services = () => {
   return (
@@ -11,7 +12,7 @@ const Services = () => {
       <TopHeader />
       <Header />
       <Hero />
-      <Expertise />
+      <OurServices />
       <Footer />
     </div>
   );
