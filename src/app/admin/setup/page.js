@@ -31,8 +31,8 @@ export default function Setup() {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
             Admin Setup
           </h2>
-          <p className="mt-2 text-center text-sm text-gray-600">
-            Create your first admin user to access the dashboard
+          <p className="mt-2 text-xs text-gray-700">
+            Please save these credentials. You will need them to log in.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export default function Setup() {
                 <strong>Password:</strong> {credentials.password}
               </p>
               <p className="mt-2 text-xs text-gray-700">
-                Please save these credentials. You'll need them to log in.
+                Please save these credentials. You will need them to log in.
               </p>
             </div>
           )}

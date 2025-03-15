@@ -13,33 +13,33 @@ export default function BlogPost({ params }) {
   const [error, setError] = useState("");
 
   useEffect(() => {
-    fetchBlogPost();
-  }, []);
+    const fetchBlogPost = async () => {
+      try {
+        setLoading(true);
+        const res = await fetch(`/api/blogs/${params.slug}`);
 
-  const fetchBlogPost = async () => {
-    try {
-      setLoading(true);
-      const res = await fetch(`/api/blogs/${params.slug}`);
-
-      if (!res.ok) {
-        if (res.status === 404) {
-          throw new Error("Blog post not found");
+        if (!res.ok) {
+          if (res.status === 404) {
+            throw new Error("Blog post not found");
+          }
+          throw new Error("Failed to fetch blog post");
         }
-        throw new Error("Failed to fetch blog post");
-      }
 
-      const data = await res.json();
-      setPost(data);
-      setError("");
-    } catch (error) {
-      console.error("Error fetching blog post:", error);
-      setError(
-        error.message || "Failed to load blog post. Please try again later."
-      );
-    } finally {
-      setLoading(false);
-    }
-  };
+        const data = await res.json();
+        setPost(data);
+        setError("");
+      } catch (error) {
+        console.error("Error fetching blog post:", error);
+        setError(
+          error.message || "Failed to load blog post. Please try again later."
+        );
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogPost(); // Call it inside useEffect
+  }, [params.slug]); // Add params.slug to dependencies if dynamic
 
   if (loading) {
     return (

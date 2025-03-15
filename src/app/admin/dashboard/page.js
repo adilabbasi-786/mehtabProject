@@ -24,7 +24,7 @@ export default function Dashboard() {
       return;
     }
     fetchBlogs();
-  }, []);
+  }, [router]);
 
   const fetchBlogs = async () => {
     try {
