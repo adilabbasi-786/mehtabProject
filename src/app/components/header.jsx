@@ -70,6 +70,12 @@ export default function Header() {
               Specialties
             </Link>
             <Link
+              href="/specialities"
+              className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
+            >
+              Blogs
+            </Link>
+            <Link
               href="/contact"
               className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
             >
@@ -126,6 +132,12 @@ export default function Header() {
                 className="hover:text-blue-100 transition-colors"
               >
                 Specialties
+              </Link>
+              <Link
+                href="/blog"
+                className="hover:text-blue-100 transition-colors"
+              >
+                Blogs
               </Link>
               <Link
                 href="/contact"

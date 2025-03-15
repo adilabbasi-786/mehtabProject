@@ -33,14 +33,14 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Image
-              src="/placeholder.svg?height=100&width=300"
-              alt="TRISTAR MBC LLC"
+              src="/solislogo.png"
+              alt="Solis"
               width={300}
               height={100}
               className="bg-white p-2"
             />
             <p className="text-sm leading-relaxed">
-              Tristar medical credentialing and billing is a premium medical
+              Solis Rcm medical credentialing and billing is a premium medical
               billing & credentialing company in Texas to provide quality medial
               billing and credentialing services.
             </p>

@@ -11,7 +11,7 @@ export default function TopHeader() {
           <Link href="/">
             <div className="relative h-16 w-48 md:w-64">
               <Image
-                src="/logo.png"
+                src="/solislogo.png"
                 alt="TRISTAR MBC"
                 fill
                 className="object-contain"
