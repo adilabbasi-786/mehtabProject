@@ -1,0 +1,82 @@
+/* CKEditor List Styling */
+.ck-editor__editable ul,
+.ck-editor__editable ol {
+  list-style: initial;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.ck-editor__editable li {
+  margin-bottom: 5px;
+}
+
+.ck-editor__editable {
+  min-height: 300px;
+  max-height: 500px;
+}
+
+.ck-content .image {
+  max-width: 100%;
+  margin: 20px auto;
+}
+
+.ck-content .image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  min-width: 50px;
+}
+
+.ck-content .image-style-side {
+  float: right;
+  margin-left: 1.5em;
+  max-width: 50%;
+}
+
+.ck-content .image-style-align-left {
+  float: left;
+  margin-right: 1.5em;
+}
+
+.ck-content .image-style-align-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ck-content .image-style-align-right {
+  float: right;
+  margin-left: 1.5em;
+}
+
+/* Table styles */
+.ck-content .table {
+  margin: 1em auto;
+  display: table;
+}
+
+.ck-content .table table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #bfbfbf;
+}
+
+.ck-content .table table td,
+.ck-content .table table th {
+  min-width: 2em;
+  padding: 0.4em;
+  border: 1px solid #bfbfbf;
+}
+
+.ck-content .table table th {
+  font-weight: bold;
+  background: #f0f0f0;
+}
+
+/* Improve the look of the editor on smaller screens */
+@media screen and (max-width: 600px) {
+  .ck-editor__editable {
+    min-height: 200px;
+  }
+}
