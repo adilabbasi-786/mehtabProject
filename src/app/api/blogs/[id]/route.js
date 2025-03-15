@@ -2,7 +2,10 @@ import { NextResponse } from "next/server";
 import connectDB from "@/app/lib/db";
 import Blog from "@/app/models/Blog";
 
-export async function GET(req, { params }) {
+// GET /api/blogs/[id]
+export async function GET(request, context) {
+  const { params } = context; // Access params from context
+
   try {
     console.log("Fetching blog with ID:", params.id);
     await connectDB();
