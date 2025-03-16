@@ -26,7 +26,7 @@ import {
 import { CKEditor, CKEditorContext } from "@ckeditor/ckeditor5-react";
 import "ckeditor5/ckeditor5.css";
 import "./TextEditor.css";
-
+import React from "react";
 const TextEditor = ({ value, onChange }) => {
   return (
     <CKEditorContext context={Context} contextWatchdog={ContextWatchdog}>

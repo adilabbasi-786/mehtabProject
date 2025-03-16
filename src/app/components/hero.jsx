@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import Marquee from "react-fast-marquee";
-
+import React from "react";
 export default function Hero() {
   const pathname = usePathname();
 

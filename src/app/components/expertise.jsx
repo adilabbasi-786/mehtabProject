@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { BsJournalMedical } from "react-icons/bs";

@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-
+import React from "react";
 const ImageUpload = ({ value, onChange }) => {
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
