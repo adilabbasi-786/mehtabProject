@@ -103,6 +103,29 @@ export default function Dashboard() {
     router.push("/admin");
   };
 
+  const handleDelete = async (id) => {
+    try {
+      const token = localStorage.getItem("token");
+      const res = await fetch(`/api/blogs/${id}`, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      });
+
+      if (res.ok) {
+        setSuccess("Blog post deleted successfully!");
+        fetchBlogs();
+      } else {
+        const data = await res.json();
+        setError(data.error || "Failed to delete blog post");
+      }
+    } catch (error) {
+      console.error("Error deleting blog:", error);
+      setError("An error occurred while deleting the blog post");
+    }
+  };
+
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -209,14 +232,30 @@ export default function Dashboard() {
                         day: "numeric",
                       })}
                     </p>
-                    <a
-                      href={`/blog/${blog._id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
-                    >
-                      View Blog →
-                    </a>
+                    <div className="flex justify-between items-center">
+                      <a
+                        href={`/blog/${blog._id}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-indigo-600 hover:text-indigo-800 text-sm font-medium"
+                      >
+                        View Blog →
+                      </a>
+                      <button
+                        onClick={() => {
+                          if (
+                            confirm(
+                              "Are you sure you want to delete this blog post?"
+                            )
+                          ) {
+                            handleDelete(blog._id);
+                          }
+                        }}
+                        className="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 text-sm"
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </div>
                 </div>
               ))}

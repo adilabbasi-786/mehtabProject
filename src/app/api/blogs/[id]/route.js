@@ -27,3 +27,25 @@ export async function GET(request, context) {
     );
   }
 }
+
+// DELETE /api/blogs/[id]
+export async function DELETE(request, context) {
+  const { params } = context;
+
+  try {
+    await connectDB();
+    const blog = await Blog.findByIdAndDelete(params.id);
+
+    if (!blog) {
+      return NextResponse.json({ error: "Blog not found" }, { status: 404 });
+    }
+
+    return NextResponse.json({ message: "Blog deleted successfully" });
+  } catch (error) {
+    console.error("Error deleting blog:", error);
+    return NextResponse.json(
+      { error: "Failed to delete blog: " + error.message },
+      { status: 500 }
+    );
+  }
+}
