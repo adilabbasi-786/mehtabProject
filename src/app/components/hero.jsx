@@ -65,8 +65,8 @@ export default function Hero() {
         gradient={false}
         className="bg-black text-red-500 py-3 text-xl font-semibold"
       >
-        Be hurry! Avail our offer and services — 20% off on entire menu —
-        Contact us for More Details!
+        Unlock Your Practice's Potential: Flat Fee Credentialing Services for
+        All Insurances - Just $1,000!
       </Marquee>
 
       {/* Call Us Section */}

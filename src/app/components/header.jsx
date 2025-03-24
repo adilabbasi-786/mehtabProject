@@ -8,20 +8,48 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10); // Trigger shadow when scrolled 10px
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent body scroll when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isMenuOpen]);
+
   return (
     <>
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <div className="bg-blue-500 rounded-full mx-4 md:mx-8 lg:mx-16 fixed top-0 left-0 right-0 z-50">
-          <div className="flex justify-between items-center p-4 border-b border-blue-800">
-            <button className="text-white" onClick={() => setIsMenuOpen(false)}>
+      <div
+        className={`fixed inset-0 bg-black bg-opacity-50 transition-opacity duration-300 z-40 ${
+          isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+
+      <div
+        className={`fixed inset-0 bg-blue-500 z-50 transform transition-transform duration-300 ease-in-out ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <div className="flex flex-col h-full">
+          {/* Header with close button */}
+          <div className="flex justify-between items-center p-4 border-b">
+            <button
+              className="text-gray-600 hover:text-gray-900 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
+              aria-label="Close menu"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8"
@@ -38,52 +66,60 @@ export default function Header() {
               </svg>
             </button>
             <Link
-              href="/appointment"
-              className="px-6 py-2 bg-white text-blue-500 rounded-full"
+              href="/contact"
+              className="px-6 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors"
             >
               GET APPOINTMENT
             </Link>
           </div>
-          <nav className="flex-1 flex flex-col w-full">
+
+          {/* Navigation Links */}
+          <nav className="flex-1 flex flex-col">
             <Link
               href="/"
-              className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
+              className="w-full text-center py-6 text-gray-800 text-xl border-b hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Home
             </Link>
             <Link
               href="/aboutus"
-              className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
+              className="w-full text-center py-6 text-gray-800 text-xl border-b hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               About Us
             </Link>
             <Link
               href="/services"
-              className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
+              className="w-full text-center py-6 text-gray-800 text-xl border-b hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Services
             </Link>
             <Link
               href="/specialities"
-              className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
+              className="w-full text-center py-6 text-gray-800 text-xl border-b hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Specialties
             </Link>
             <Link
-              href="/specialities"
-              className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
+              href="/blog"
+              className="w-full text-center py-6 text-gray-800 text-xl border-b hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Blogs
             </Link>
             <Link
               href="/contact"
-              className="w-full text-center py-6 text-white text-xl border-b border-blue-800 hover:bg-blue-800"
+              className="w-full text-center py-6 text-gray-800 text-xl border-b hover:bg-gray-50 transition-colors"
+              onClick={() => setIsMenuOpen(false)}
             >
               Contact
             </Link>
           </nav>
         </div>
-      )}
+      </div>
 
       {/* Main Header */}
       <div className="bg-blue-500 rounded-full mx-4 md:mx-8 lg:mx-16 -mb-6 relative z-10">
@@ -93,6 +129,7 @@ export default function Header() {
             <button
               className="md:hidden absolute left-4 top-2 text-white"
               onClick={() => setIsMenuOpen(true)}
+              aria-label="Open menu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -146,7 +183,7 @@ export default function Header() {
                 Contact
               </Link>
               <Link
-                href="/appointment"
+                href="/contact"
                 className="md:hidden lg:block hover:text-blue-100 transition-colors"
               >
                 Get Appointment
@@ -154,7 +191,7 @@ export default function Header() {
             </nav>
 
             <Link
-              href="/appointment"
+              href="/contact"
               className="hidden md:block mt-4 md:mt-0 px-6 py-2 bg-transparent border-2 border-white text-white rounded-full hover:bg-white hover:text-blue-500 transition-colors"
             >
               GET APPOINTMENT

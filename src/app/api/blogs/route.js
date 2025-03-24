@@ -4,17 +4,26 @@ import Blog from "@/app/models/Blog";
 import { auth } from "@/app/middleware/auth";
 
 // Get all blogs
-export async function GET() {
+export async function GET(request) {
   try {
-    console.log("Fetching all blogs");
+    const { searchParams } = new URL(request.url);
+    const limit = parseInt(searchParams.get("limit")) || 0;
+
     await connectDB();
-    const blogs = await Blog.find().sort({ createdAt: -1 });
-    console.log(`Found ${blogs.length} blogs`);
+
+    let query = Blog.find().sort({ createdAt: -1 });
+
+    if (limit > 0) {
+      query = query.limit(limit);
+    }
+
+    const blogs = await query;
+
     return NextResponse.json(blogs);
   } catch (error) {
     console.error("Error fetching blogs:", error);
     return NextResponse.json(
-      { error: "Failed to fetch blogs: " + error.message },
+      { error: "Failed to fetch blogs" },
       { status: 500 }
     );
   }

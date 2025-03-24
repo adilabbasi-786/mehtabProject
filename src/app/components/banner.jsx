@@ -36,7 +36,7 @@ export default function BannerSection() {
 
             <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Link
-                href="/appointment"
+                href="/contact"
                 className="bg-white text-[#1e5584] px-6 py-3 text-center font-medium transition-colors hover:bg-gray-100 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#1e5584] focus:outline-none"
               >
                 BOOK APPOINTMENT
@@ -53,7 +53,7 @@ export default function BannerSection() {
             <p className="text-lg md:text-xl font-medium">
               OR CALL:{" "}
               <a href="tel:+14699154211" className="hover:underline">
-                (469) 915-4211
+                412-547-2794
               </a>
             </p>
           </div>

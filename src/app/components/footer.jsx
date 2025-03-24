@@ -21,7 +21,7 @@ export default function Footer() {
             Book Your Appointment Online!
           </h2>
           <Link
-            href="/appointment"
+            href="/contact"
             className="border border-white px-6 py-3 hover:bg-white/10 transition-colors"
           >
             ONLINE APPOINTMENT
@@ -138,7 +138,7 @@ export default function Footer() {
       <div className="border-t border-white/10">
         <div className="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center text-sm">
           <p>
-            Copyright © {currentYear} Tristar Medical Credentialing & Billing.
+            Copyright © {currentYear} Solis Rcm Medical Credentialing & Billing.
             All rights reserved.
           </p>
           <Link href="/terms" className="hover:underline mt-2 md:mt-0">

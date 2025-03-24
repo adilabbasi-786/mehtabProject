@@ -5,6 +5,7 @@ import Header from "@/app/components/header";
 import Hero from "@/app/components/hero";
 import { TestimonialSlider } from "@/app/components/testimonials";
 import TopHeader from "@/app/components/top-header";
+import HomeBlogs from "@/app/components/home-blogs";
 import React from "react";
 
 const HomePage = () => {
@@ -15,6 +16,7 @@ const HomePage = () => {
       <Hero />
       <Expertise />
       <TestimonialSlider />
+      <HomeBlogs />
       <BannerSection />
       <Footer />
     </main>

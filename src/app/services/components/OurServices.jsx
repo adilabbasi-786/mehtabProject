@@ -114,15 +114,14 @@ export default function OurServices() {
 }
 
 const ServiceCard = ({ icon, title, desc, link }) => (
-  <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center">
-    <div className="mb-4">{icon}</div>
-    <h3 className="text-xl font-semibold text-slate-800 mb-2">{title}</h3>
-    <p className="text-gray-600 mb-6">{desc}</p>
-    <Link
-      href={link}
-      className="mt-auto inline-flex items-center text-blue-500 hover:text-blue-700 font-medium"
-    >
-      LEARN MORE <ArrowRight className="ml-1 h-4 w-4" />
-    </Link>
-  </div>
+  <Link href={link}>
+    <div className="bg-white p-8 rounded-lg shadow-sm border border-gray-100 flex flex-col items-center text-center hover:shadow-md transition-shadow duration-200">
+      <div className="mb-4">{icon}</div>
+      <h3 className="text-xl font-semibold text-slate-800 mb-2">{title}</h3>
+      <p className="text-gray-600 mb-6">{desc}</p>
+      <div className="mt-auto inline-flex items-center text-blue-500 hover:text-blue-700 font-medium">
+        LEARN MORE <ArrowRight className="ml-1 h-4 w-4" />
+      </div>
+    </div>
+  </Link>
 );
