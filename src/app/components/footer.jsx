@@ -56,7 +56,7 @@ export default function Footer() {
                 "Medical Billing",
                 "Medical Credentialing",
                 "Web Design",
-                "SEO",
+                "web-design-seo",
               ].map((service) => (
                 <li key={service}>
                   <Link
@@ -76,23 +76,36 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {[
-                "Home",
-                "About",
-                "Appointment",
-                "Services",
-                "Contact",
-                "Privacy Policy",
-              ].map((link) => (
-                <li key={link}>
-                  <Link
-                    href={`/${link.toLowerCase().replace(" ", "-")}`}
-                    className="hover:underline"
-                  >
-                    {link}
-                  </Link>
-                </li>
-              ))}
+              <li>
+                <Link href="/" className="hover:underline">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link href="/aboutus" className="hover:underline">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:underline">
+                  Appointment
+                </Link>
+              </li>
+              <li>
+                <Link href="/services" className="hover:underline">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:underline">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy-policy" className="hover:underline">
+                  Privacy Policy
+                </Link>
+              </li>
             </ul>
           </div>
 
