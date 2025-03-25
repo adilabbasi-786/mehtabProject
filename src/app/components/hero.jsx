@@ -9,7 +9,11 @@ export default function Hero() {
 
   return (
     <>
-      <div className="relative w-full h-[500px] md:h-[600px]">
+      <div
+        className={`relative w-full ${
+          pathname === "/" ? "h-[500px] md:h-[600px]" : "h-[300px] md:h-[300px]"
+        }`}
+      >
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
@@ -25,13 +29,21 @@ export default function Hero() {
         {/* Content */}
         <div className="relative h-full container mx-auto px-4 flex items-center justify-center">
           <div className="text-center text-white">
-            <h1 className="text-3xl md:text-5xl font-bold mb-4">
+            <h1
+              className={`${
+                pathname === "/"
+                  ? "text-3xl md:text-5xl"
+                  : "text-2xl md:text-3xl"
+              } font-bold mb-4`}
+            >
               Professional Medical Billing Services
             </h1>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              Streamline your healthcare practice with our comprehensive billing
-              and credentialing solutions
-            </p>
+            {pathname === "/" && (
+              <p className="text-lg md:text-xl max-w-2xl mx-auto mb-8">
+                Streamline your healthcare practice with our comprehensive
+                billing and credentialing solutions
+              </p>
+            )}
 
             {/* Conditionally Rendered */}
             {pathname === "/" ? (
@@ -72,7 +84,7 @@ export default function Hero() {
       {/* Call Us Section */}
       <div className="h-[150px] bg-[#0d4471] flex items-center justify-center">
         <p className="text-white text-3xl text-center">
-          Looking To Get Our Services - Call Us Now (469) 915-4211
+          Looking To Get Our Services - Call Us Now 412-547-2794
         </p>
       </div>
     </>

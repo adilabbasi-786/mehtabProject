@@ -53,9 +53,9 @@ const ContactPage = () => {
                   Location
                 </h3>
                 <p className="text-gray-600">
-                  16775 Addison Rd,
+                  1942 Broadway St Ste 314c
                   <br />
-                  Addison, TX 75001
+                  Boulder Co 80302
                 </p>
               </div>
             </div>
@@ -69,7 +69,7 @@ const ContactPage = () => {
                 <h3 className="text-xl font-semibold text-[#0a3b66] mb-2">
                   Phone
                 </h3>
-                <p className="text-gray-600">(469) 915-4211</p>
+                <p className="text-gray-600">412-547-2794</p>
               </div>
             </div>
 
@@ -82,7 +82,7 @@ const ContactPage = () => {
                 <h3 className="text-xl font-semibold text-[#0a3b66] mb-2">
                   Email
                 </h3>
-                <p className="text-gray-600">info@tristarmbc.com</p>
+                <p className="text-gray-600">info@solisrcm.com</p>
               </div>
             </div>
           </div>
