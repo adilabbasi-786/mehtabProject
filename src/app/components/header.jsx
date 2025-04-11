@@ -188,6 +188,18 @@ export default function Header() {
               >
                 Get Appointment
               </Link>
+              <Link
+                href="/policy"
+                className="md:hidden lg:block hover:text-blue-100 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/terms-conditions"
+                className="md:hidden lg:block hover:text-blue-100 transition-colors"
+              >
+                Terms And Conditions
+              </Link>
             </nav>
 
             <Link
