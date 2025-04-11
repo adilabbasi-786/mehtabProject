@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MapPin, Phone, Mail } from "lucide-react";
+import { toast } from "react-hot-toast";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +12,7 @@ const ContactPage = () => {
     message: "",
     smsConsent: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -22,8 +24,34 @@ const ContactPage = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // Add your form submission logic here
-    console.log("Form submitted:", formData);
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (result.success) {
+        toast.success("Form submitted successfully!");
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          message: "",
+          smsConsent: false,
+        });
+      } else {
+        toast.error(result.message || "Form submission failed!");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      toast.error("Error submitting form");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -168,9 +196,10 @@ const ContactPage = () => {
 
             <button
               type="submit"
-              className="w-full bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600 transition-colors"
+              disabled={isSubmitting}
+              className="w-full bg-blue-500 text-white py-3 px-6 rounded-md hover:bg-blue-600 transition-colors disabled:bg-blue-400"
             >
-              Submit
+              {isSubmitting ? "Submitting..." : "Submit"}
             </button>
 
             <p className="text-sm text-white/80">
