@@ -136,7 +136,7 @@ export default function Footer() {
             </div>
             {/* Contact Info */}
             <address className="not-italic space-y-2 text-sm">
-              <p>16775 Addison Rd, Addison, TX 75001</p>
+              <p>1942 Broadway St Ste 314c Boulder Co 80302</p>
               <p>
                 <a href="tel:+ 412-547-2794" className="hover:underline">
                   412-547-2794

@@ -59,7 +59,7 @@ export default function TopHeader() {
             </div>
             <div className="text-left">
               <p className="text-xs text-gray-500">
-                16775 Addison Rd, Addison, TX
+                1942 Broadway St Ste 314c Boulder Co 80302
               </p>
               <p className="text-sm font-medium">75001</p>
             </div>
