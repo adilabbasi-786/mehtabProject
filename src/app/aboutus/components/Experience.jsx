@@ -10,11 +10,11 @@ export default function Experience() {
           </p>
 
           <h1 className="text-4xl md:text-5xl font-bold text-[#0a3b66] mb-6 leading-tight">
-            We&apos;re Leading Medical Billing & Credentialing Company in Texas
+            We&apos;re Leading Medical Billing & Credentialing Company in Boulder, Colorado
           </h1>
 
           <p className="text-gray-700 text-lg mb-8">
-            We are a medical billing and credentialing company based in Texas.
+            We are a medical billing and credentialing company based in Boulder, Colorado.
             We provide a variety of services for providers all across the US,
             including Medical billing, Credentialing, Web development and
             digital marketing.

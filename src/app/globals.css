@@ -14,8 +14,8 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1e2d6f;   /* Darker blue */
+    --foreground: #ededed;   /* Light gray */
   }
 }
 
@@ -138,4 +138,9 @@ body {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
   font-size: 0.875em;
+}
+.footer-logo {
+  background: transparent;
+  opacity: 0.9; /* Optional: adjust for more/less transparency */
+  /* Remove box-shadow or border if any */
 }

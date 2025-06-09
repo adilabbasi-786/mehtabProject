@@ -35,15 +35,15 @@ export default function Footer() {
           {/* Company Info */}
           <div className="space-y-4">
             <Image
-              src="/solislogo.png"
+              src="/solisrcmlogo.png"
               alt="Solis"
               width={300}
               height={100}
-              className="bg-white p-2"
+              className="p-2 footer-logo"
             />
             <p className="text-sm leading-relaxed">
               Solis Rcm medical credentialing and billing is a premium medical
-              billing & credentialing company in Texas to provide quality medial
+              billing & credentialing company in Boulder, Colorados to provide quality medial
               billing and credentialing services.
             </p>
           </div>

@@ -11,7 +11,7 @@ export default function Expertise() {
       <section className="container mx-auto px-4 py-16 md:py-24">
         <div className="mb-4">
           <h3 className="text-sm md:text-base font-medium text-blue-500 uppercase tracking-wide">
-            TRISTAR BILLING & CREDENTIALING
+          Solis Rcm Medical Billing and Credentialing Company
           </h3>
         </div>
 

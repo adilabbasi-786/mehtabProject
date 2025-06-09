@@ -22,7 +22,7 @@ export default function BannerSection() {
             <div className="space-y-4 mb-8">
               <p className="text-sm md:text-base lg:text-lg opacity-90">
                 We are a medical billing and credentialing company based in
-                Texas. We provide a variety of services for providers all across
+                Boulder, Colorado. We provide a variety of services for providers all across
                 the US, including Medical billing, Credentialing and Web
                 development.
               </p>
