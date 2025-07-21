@@ -180,6 +180,10 @@ const ContactPage = () => {
 
             <div>
               <label className="flex items-start gap-2 text-white">
+                
+                <span className="text-sm">
+                  Do you agree to receive SMS from Solis, LLC?
+                </span>
                 <input
                   type="checkbox"
                   name="smsConsent"
@@ -187,10 +191,22 @@ const ContactPage = () => {
                   checked={formData.smsConsent}
                   onChange={handleChange}
                 />
-                <span className="text-sm">
-                  By checking this box you are opting in to receive SMS messages
-                  from our company regarding our services
+                <span>
+
+                Yes
                 </span>
+                <input
+                  type="checkbox"
+                  name="smsConsent"
+                  className="mt-1"
+                  checked={formData.smsConsent}
+                  onChange={handleChange}
+                />
+                <span>
+
+                No
+                </span>
+                
               </label>
             </div>
 
@@ -201,12 +217,14 @@ const ContactPage = () => {
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
+            <h1 className="text-md text-white/80">
+
+              SMS Terms of Service
+            </h1>
 
             <p className="text-sm text-white/80">
-              By completing this form, you agree to allow us to use the provided
-              information to address your inquiry. Your data will not be used
-              for marketing unless you explicitly opt-in for marketing
-              communications.
+
+            SMS Terms of Service By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Solis. This includes SMS messages for appointment scheduling, appointment reminders, post-visit instructions, lab notifications, and billing notifications. Message frequency varies. Message and data rates may apply. See privacy policy at Privacy Ploicy. Message HELP for help. Reply STOP to any message to opt out.
             </p>
           </form>
         </div>
