@@ -224,7 +224,7 @@ const ContactPage = () => {
 
             <p className="text-sm text-white/80">
 
-            SMS Terms of Service By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Solis. This includes SMS messages for appointment scheduling, appointment reminders, post-visit instructions, lab notifications, and billing notifications. Message frequency varies. Message and data rates may apply. See <a href="/policy" >privacy policy</a> at Privacy Ploicy. Message HELP for help. Reply STOP to any message to opt out.
+            SMS Terms of Service By opting into SMS from a web form or other medium, you are agreeing to receive SMS messages from Solis. This includes SMS messages for appointment scheduling, appointment reminders, post-visit instructions, lab notifications, and billing notifications. Message frequency varies. Message and data rates may apply. See <a href="/policy" className="text-blue-500 underline">privacy policy</a> at Privacy Ploicy. Message HELP for help. Reply STOP to any message to opt out.
             </p>
           </form>
         </div>
