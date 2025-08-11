@@ -109,6 +109,47 @@ const PrivacyPolicy = () => {
           policy.
         </p>
       </Section>
+      {/* New Data Privacy Policy Section */}
+      <Section title="Data Privacy">
+        <h3 className="text-lg font-semibold mb-2">1. Information We Collect</h3>
+        <p>
+          <strong>a. Personal Information*</strong> – We collect various types of information to provide and improve our services, including:
+        </p>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>b. Identifying Information:</strong></li>
+          <ul className="list-disc pl-5 space-y-1">
+            <li>Name</li>
+            <li>Contact details (email addresses, phone numbers)</li>
+          </ul>
+          <li>
+            <strong>Medical Credentialing and Billing Information:</strong> Any information related to medical credentialing and billing services that you provide to us.
+          </li>
+        </ul>
+
+        <h3 className="text-lg font-semibold mb-2">2. How We Use Your Information</h3>
+        <ul className="list-disc pl-5 space-y-1 mb-4">
+          <li><strong>Providing Services:</strong> To facilitate medical billing and credentialing services as requested by you.</li>
+          <li><strong>Communication:</strong> To respond to your inquiries, send updates, and provide information related to our services.</li>
+          <li><strong>Improvement:</strong> To analyze usage patterns and improve the quality of our website and services.</li>
+        </ul>
+
+        <h3 className="text-lg font-semibold mb-2">3. Information Sharing & Disclosure</h3>
+        <p>
+          We do not share your personal information with third parties. Your information is solely used for the provision of our medical credentialing services and communication with you.
+        </p>
+        <p>
+          No mobile information will be shared with third parties/affiliates for marketing or promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+        </p>
+
+        <h3 className="text-lg font-semibold mb-2">4. Your Consent and Control</h3>
+        <p>
+          By providing your information, you consent to the collection, processing, and storage of your personal data as outlined in this Privacy Policy.
+        </p>
+        <ul className="list-disc pl-5 space-y-1">
+          <li><strong>Opt-Out:</strong> You may opt out of receiving promotional communications from us by contacting us directly.</li>
+          <li><strong>Access and Correction:</strong> You may request access to and correction of your personal information by contacting us.</li>
+        </ul>
+      </Section>
       <Section title="7. Contact Information">
         <p>Email: info@solisrcm.com Phone: 412-547-2794</p>
       </Section>
