@@ -150,7 +150,7 @@ const PrivacyPolicy = () => {
           <li><strong>Access and Correction:</strong> You may request access to and correction of your personal information by contacting us.</li>
         </ul>
       </Section>
-      <Section title="7. Contact Information">
+      <Section title=" Contact Information">
         <p>Email: info@solisrcm.com Phone: 412-547-2794</p>
       </Section>
     </div>
